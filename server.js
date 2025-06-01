@@ -26,19 +26,19 @@ app.use(cors({ origin: ['http://localhost:5173', 'https://frontend-room-delta.ve
   credentials: true 
 }));
 
-const authRoutes = require('./routes/authRoutes');
+const authRoutes = require('./src/routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
-const userRoutes = require('./routes/userRoutes');
+const userRoutes = require('./src/routes/userRoutes');
 app.use('/api/users', userRoutes);
 
-const roomRoutes = require('./routes/roomRoutes');
+const roomRoutes = require('./src/routes/roomRoutes');
 app.use('/api/rooms', roomRoutes);
 
-const floorRoutes = require('./routes/floorRoutes');
+const floorRoutes = require('./src/routes/floorRoutes');
 app.use('/api/floors', floorRoutes);
 
-const bookingRoutes = require('./routes/bookingRoutes');
+const bookingRoutes = require('./src/routes/bookingRoutes');
 app.use('/api/bookings', bookingRoutes);
 
 const PORT = process.env.PORT || 5000;
